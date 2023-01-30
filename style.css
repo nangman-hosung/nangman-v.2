@@ -1,0 +1,124 @@
+@charset "uts-8";
+/* 전체 레이아웃 */
+#wrap{
+    color: #222;
+    background-color: #fff;
+    margin: 0;
+    width: auto;
+}
+
+
+.header{
+    /* position: -webkit-sticky; */
+    position: sticky;
+    top: 0;
+    height: 80px;
+    contain-intrinsic-height: 80px;
+    z-index: 10;
+    contain: size style layout;
+    
+}
+.header1{
+    height: 80px;
+    z-index: 100;
+    position: relative;
+    background-color: #111;
+
+}
+.header1 .header2{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: inherit;
+    padding: 0 40px;
+    background-color: rgb(22, 193, 42);
+
+}
+.start{
+    --page-shell-max-content-width: 2520px;
+    --gp-sidebar-top-padding: 0;
+    position: relative;
+    isolation: isolate;
+    --explore_padding-inline: 24px;
+}
+
+.logospace{
+    flex: 1 0 140px;
+}
+
+.logoimg{
+    outline: none;
+    align-items: center;
+    display: inline-flex;
+    height: 80px;
+    position: relative;
+    vertical-align: middle;
+    z-index: 1;
+    color: #111;
+}
+
+.middleheader{
+    padding: 0 24px;
+    flex: 0 1 auto;
+    min-width: 364px;
+    text-align: center;
+}
+
+.lastheader{
+    flex: 1 0 140px;
+    text-align: center;
+
+}
+.navi{
+    /* -webkit-padding-before: var(--explore-nav_padding-block-start); */
+    padding-block-start: var(--explore-nav_padding-block-start);
+    /* position: -webkit-sticky; */
+    position: sticky;
+    top: calc( 80px - var(--explore-nav_padding-block-start,0px) );
+    width: 100%;
+    z-index: 9;
+    height: 98px;
+    contain-intrinsic-height: 98px;
+    contain: size style layout;
+    --explore-nav_padding-block-start: 20px; /*네비바 사이 공간*/
+}
+
+.navi1{
+height: inherit;
+    --chipsbar_box-shadow: unset;
+    --chipsbar_chip-spacing: 32px;
+    --chipsbar_chip-width: 56px;
+    --chipsbar_height: 78px;
+    --contentscroller_scroller_margin-inline-start: 0;
+    background-color: #111;
+    
+    
+}
+
+.navi2{ 
+    height: 100%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 0 80px;
+}
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - var(--scrollbar-gutter,0%));
+    height: 100px;
+    z-index: 8;
+    pointer-events: none;
+    display: grid;
+    grid-template: repeat(2,auto) / repeat(3,33.333%);
+    grid-template-areas: 'left center right' 'bottom bottom bottom';
+}
+
+.footer1{
+    grid-area: bottom;
+    background-color: #122;
+}
