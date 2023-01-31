@@ -33,7 +33,9 @@
     position: relative;
     width: inherit;
     padding: 0 40px;
-    background-color: rgb(22, 193, 42);
+    background-color:white;
+    border-bottom: 1px solid gray;
+    box-shadow: 0 1px 5px gray;
 
 }
 .start{
@@ -44,8 +46,18 @@
     --explore_padding-inline: 24px;
 }
 
-.logospace{
-    flex: 1 0 140px;
+.logospace {
+    font-size: 24px;
+}
+
+
+.logospace a{
+    text-decoration: none;
+    color: rgb(30, 157, 257);
+}
+
+.logospace i {
+    color: rgb(30, 157, 257);
 }
 
 .logoimg{
@@ -62,15 +74,22 @@
 .middleheader{
     padding: 0 24px;
     flex: 0 1 auto;
-    min-width: 364px;
+    min-width: 10px;
     text-align: center;
 }
 
-.lastheader{
-    flex: 1 0 140px;
+.header_menu{
+    flex: 1 0 400px;
     text-align: center;
-
+    display: flex;
+    list-style: none;
 }
+
+.lastheader a{
+    padding: 8px 12px;
+    color: black;
+}
+
 .navi{
     /* -webkit-padding-before: var(--explore-nav_padding-block-start); */
     padding-block-start: var(--explore-nav_padding-block-start);
