@@ -96,34 +96,80 @@
     /* position: -webkit-sticky; */
     position: sticky;
     top: calc( 80px - var(--explore-nav_padding-block-start,0px) );
-    width: 100%;
     z-index: 9;
     height: 98px;
     contain-intrinsic-height: 98px;
     contain: size style layout;
     --explore-nav_padding-block-start: 20px; /*네비바 사이 공간*/
+
 }
 
-.navi1{
+.navicontainer{
+display: flex;
+padding: 0 100px;
 height: inherit;
-    --chipsbar_box-shadow: unset;
-    --chipsbar_chip-spacing: 32px;
-    --chipsbar_chip-width: 56px;
-    --chipsbar_height: 78px;
-    --contentscroller_scroller_margin-inline-start: 0;
-    background-color: #111;
-    
-    
-}
+justify-content: center;
+}   
 
-.navi2{ 
-    height: 100%;
-    margin-inline: auto;
+.naviitem{
+    width: 100px;
+    margin: 0 20px;
     display: grid;
-    grid-template-columns: 100%;
-    padding: 0 80px;
+    grid-template-rows: [first] 75% [second] 25% ;
 }
 
+.naviitem:hover{
+    transition: 0.5s;
+  filter: brightness(0) invert(0);
+}
+
+/*아이콘 크기 조정 -> padding 조정*/
+.naviitem .concert_icon {
+    padding:20px;
+    padding-top: 10px;
+  }
+  
+  .naviitem .fest_icon {
+    padding: 20px;
+    padding-top: 10px;
+  }
+  
+  .naviitem .pj_icon {
+    padding: 20px;
+    padding-top: 10px;
+  }
+  
+
+  /* 아이콘, 글 에 마우스 -> 검정 */
+  
+  .main_selector ul li:hover{
+    transition: 0.5s;
+    filter: brightness(0) invert(0);
+  } */
+  
+  /* 아이콘 이미지 삽입 */
+   .naviicon1 {
+    background: url('/images/briefing.png') no-repeat;
+    filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+  }
+  
+  .concert_icon {
+    background: url('/images/microphone.png') no-repeat;
+    background-size: 100% auto;
+    filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+  }
+  
+  .fest_icon {
+    background: url('/images/festival.png') no-repeat;
+    background-size: 100% auto;
+    filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+  }
+  
+  .pj_icon {
+    background: url('/images/briefing.png') no-repeat;
+    background-size: 100% auto;
+    filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+  }
 
 .footer{
     position: fixed;
@@ -146,12 +192,9 @@ height: inherit;
 
 .content{
     margin-inline: auto;
-    /* padding-inline-start: var(--explore_padding-inline);
-    padding-inline-end: var(--explore_padding-inline); */
     background: var(#444);
     max-width: var(--page-shell-max-content-width,1760px);
     contain: paint layout;
-    /* width: 100%; */
     padding: 0 80px;
 }
     
