@@ -109,18 +109,21 @@ display: flex;
 padding: 0 100px;
 height: inherit;
 justify-content: center;
+background-color: #fff;
 }   
 
 .naviitem{
-    width: 100px;
+    min-width: 80px;
     margin: 0 20px;
     display: grid;
     grid-template-rows: [first] 75% [second] 25% ;
+    text-align: center;
+    cursor: pointer;
 }
 
 .naviitem:hover{
     transition: 0.5s;
-  filter: brightness(0) invert(0);
+  filter: brightness(2) invert(0);
 }
 
 /*아이콘 크기 조정 -> padding 조정*/
@@ -140,35 +143,37 @@ justify-content: center;
   }
   
 
-  /* 아이콘, 글 에 마우스 -> 검정 */
-  
-  .main_selector ul li:hover{
-    transition: 0.5s;
-    filter: brightness(0) invert(0);
-  } */
   
   /* 아이콘 이미지 삽입 */
-   .naviicon1 {
-    background: url('/images/briefing.png') no-repeat;
+
+  .naviicon{
+    width: inherit;
     filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+    display: block; 
+    
+  } 
+ .project {
+    background: url('/images/briefing.png') no-repeat;
+    background-size:70%;
+    background-position: center;
   }
   
-  .concert_icon {
+  .concert {
     background: url('/images/microphone.png') no-repeat;
-    background-size: 100% auto;
-    filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+    background-size:70%;
+    background-position: center;
   }
   
-  .fest_icon {
+  .festival {
     background: url('/images/festival.png') no-repeat;
-    background-size: 100% auto;
-    filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+    background-size:70%;
+    background-position: center;
   }
   
-  .pj_icon {
-    background: url('/images/briefing.png') no-repeat;
-    background-size: 100% auto;
-    filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+  .exhibition {
+    background: url('/images/exhibition.png') no-repeat;
+    background-size:70%;
+    background-position: center;
   }
 
 .footer{
