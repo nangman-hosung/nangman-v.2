@@ -109,18 +109,21 @@ display: flex;
 padding: 0 100px;
 height: inherit;
 justify-content: center;
+background-color: #fff;
 }   
 
 .naviitem{
-    width: 100px;
+    min-width: 80px;
     margin: 0 20px;
     display: grid;
     grid-template-rows: [first] 75% [second] 25% ;
+    text-align: center;
+    cursor: pointer;
 }
 
 .naviitem:hover{
     transition: 0.5s;
-  filter: brightness(0) invert(0);
+  filter: brightness(2) invert(0);
 }
 
 /*아이콘 크기 조정 -> padding 조정*/
@@ -140,36 +143,70 @@ justify-content: center;
   }
   
 
-  /* 아이콘, 글 에 마우스 -> 검정 */
-  
-  .main_selector ul li:hover{
-    transition: 0.5s;
-    filter: brightness(0) invert(0);
-  } */
   
   /* 아이콘 이미지 삽입 */
-   .naviicon1 {
-    background: url('/images/briefing.png') no-repeat;
+
+  .naviicon{
+    width: inherit;
     filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+    display: block; 
+    
+  } 
+ .project {
+    background: url('/images/briefing.png') no-repeat;
+    background-size:70%;
+    background-position: center;
   }
   
-  .concert_icon {
+  .concert {
     background: url('/images/microphone.png') no-repeat;
-    background-size: 100% auto;
-    filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+    background-size:70%;
+    background-position: center;
   }
   
-  .fest_icon {
+  .festival {
     background: url('/images/festival.png') no-repeat;
-    background-size: 100% auto;
-    filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+    background-size:70%;
+    background-position: center;
   }
   
-  .pj_icon {
-    background: url('/images/briefing.png') no-repeat;
-    background-size: 100% auto;
-    filter: opacity(0.5) drop-shadow(0 0 0 #6B6A6F);
+  .exhibition {
+    background: url('/images/exhibition.png') no-repeat;
+    background-size:70%;
+    background-position: center;
   }
+
+ 
+  .searchicon {
+    background:url(/images/search2.png);
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+  }
+
+  .search form{
+    position: sticky;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0,0,0,.1);
+    background: #fff; 
+}
+
+.search form input[type="text"]{
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #34404b;
+    width: 540px;
+    display: inline-block;
+    margin-right: 10px;
+    outline: none;
+}
+
+.search form input[type="text"]:focus{
+    border-bottom-color: #3498db;
+}
 
 .footer{
     position: fixed;
@@ -209,5 +246,40 @@ justify-content: center;
 
 
 .h01{
- height: 300px;    
+ height: 400px; 
+    
+}
+
+        
+.h01 .rank {position: absolute; top: 20px; left: 100px; width: 100px; height: 50px; line-height: 50px;
+background-color: rgba(185, 236, 227, 0.667); text-align: center;}
+.h01 .infor h3 {
+        color: #333; font-size: 30px; font-weight: 700; margin-bottom: 20px;
+}
+.h01 .infor h3 {
+    position: absolute; top: 280px; display: inline-block; background:#3498db;
+}
+.h01 .infor .infor_btn a{
+    position: absolute; top: 360px; left: 200px; display: inline-block; background: #f2f2f2; font-size: 12px; padding: 15px 20px; 
+}
+
+.box{
+    width: inherit;
+    height: inherit;
+    border-color: #111;
+   
+    display: grid;
+    grid-template-rows: 70% 30%;    
+
+}
+
+.posterspace{
+    background: url(/images/poster01.jpg) no-repeat;
+    background-size: cover ;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.infospace{
+    position: relative;
 }
