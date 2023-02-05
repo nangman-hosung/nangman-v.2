@@ -1,4 +1,14 @@
 @charset "uts-8";
+
+:root {
+    --breakpoint-grid: 300px;
+  }
+  
+  @media (max-width: var(--breakpoint-grid)) {
+    /* styles for devices with a max width of 800px */
+
+  }
+
 /* 전체 레이아웃 */
 #wrap{
     color: #222;
@@ -207,12 +217,102 @@ background-color: #fff;
 .content2{
     display: grid;
     grid-auto-flow: row dense;
-    grid-auto-rows: var( --breakpoint-grid_auto-rows, minmax(min-content,max-content) );
+    grid-auto-rows: var(--breakpoint-grid, minmax(-webkit-min-content,-webkit-max-content) );
+   
     grid-gap: var(--breakpoint-grid_row-gap,0) var(--breakpoint-grid_column-gap,0);
     grid-template-columns: var( --breakpoint-grid_column-template, repeat(4,minmax(0,1fr)) );
+    /* grid-template-columns: repeat(auto-fit,200px); */
+    --breakpoint-grid_column-gap: 24px;
+    --breakpoint-grid_row-gap: 40px;
+}
+
+/* 세부 콘텐츠 스타일 고정 */
+
+.box{
+ 
+    height: inherit;
+
+    display: grid;
+    grid-template-rows: 70% 30%;    
+
+}
+
+.infospace{
+    position: relative;
+    display: grid;
+    grid-template-rows: 20% 50% 30%;    
+    gap: 2px 4px;
+
+}
+.info-name{
+    text-align: left;
+    font-size: 18px;  
+}
+/* 세부 콘텐츠 반복사항들 */
+.h01{
+    height: inherit;
+    display: contents;
+
+}
+
+.h01 .posterspace{
+    background: url(/images/exhibition.png) no-repeat;
+    background-size: 70% ;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.h02{
+    height: inherit;
+    display: contents;
+
+}
+
+.h02 .posterspace{
+    background: url(/images/exhibition.png) no-repeat;
+    background-size: 80% ;
+    background-position: center;
+    border-radius: 10px;
 }
 
 
-.h01{
- height: 300px;    
+.h03{
+    height: inherit;
+    display: contents;
+
+}
+
+.h03 .posterspace{
+    background: url(/images/exhibition.png) no-repeat;
+    background-size: 80% ;
+    background-position: center;
+    border-radius: 10px;
+}
+
+
+.h04{
+    height: inherit;
+    display: contents;
+
+}
+
+
+.h04 .posterspace{
+    background: url(/images/exhibition.png) no-repeat;
+    background-size: 80% ;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.h05{
+    height: inherit;
+    display: contents;
+
+}
+
+.h05 .posterspace{
+    background: url(/images/exhibition.png) no-repeat;
+    background-size: 80% ;
+    background-position: center;
+    border-radius: 10px;
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+  --breakpoint-grid_auto: 3;
+}
+
+.grid {
+  display: grid;
+  background-color: #000;
+  grid-template-columns: repeat(var(--breakpoint-grid_auto), 1fr);
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="grid"></div>
+    </div>
+</body>
+</html>
