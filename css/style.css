@@ -220,8 +220,8 @@ background-color: #fff;
     grid-auto-rows: var(--breakpoint-grid, minmax(-webkit-min-content,-webkit-max-content) );
    
     grid-gap: var(--breakpoint-grid_row-gap,0) var(--breakpoint-grid_column-gap,0);
-    grid-template-columns: var( --breakpoint-grid_column-template, repeat(4,minmax(0,1fr)) );
-    /* grid-template-columns: repeat(auto-fit,200px); */
+    /* grid-template-columns: var( --breakpoint-grid_column-template, repeat(4,minmax(0,1fr)) ); */
+    grid-template-columns: repeat(auto-fiil,200px);
     --breakpoint-grid_column-gap: 24px;
     --breakpoint-grid_row-gap: 40px;
 }
