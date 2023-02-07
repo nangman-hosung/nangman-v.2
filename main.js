@@ -19,7 +19,6 @@ window.onclick = function(event) {
 }
 
 
-
 // 카카오 로그인
 
 Kakao.init('1bd83dd9c1eda15c89d6a9cc209d0a69');
