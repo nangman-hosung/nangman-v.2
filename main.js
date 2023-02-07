@@ -1,5 +1,5 @@
+// 0207 -- nam
 // 로그인 팝업
-
 var loginBtn = document.getElementById("login-btn");
 var loginPopup = document.getElementById("login-popup");
 var closeBtn = document.getElementsByClassName("close-btn")[0];
@@ -47,6 +47,8 @@ function kakaoLogin() {
 document.getElementById('kakao-login-btn').addEventListener('click', function() {
   kakaoLogin();
 });
+// .
+
 
 
 
